@@ -30,8 +30,8 @@ git commit -m "Initial commit: Lomen Club App with React/Vite and WordPress them
 # Login to GitHub CLI (if not already logged in)
 gh auth login
 
-# Create repository on GitHub
-gh repo create lomen-club-app --public --description "Lomen Club - Web3 Community Platform with React/Vite frontend and WordPress theme" --push
+# Create repository on GitHub and push code
+gh repo create lomen-club-app --public --description "Lomen Club - Web3 Community Platform with React/Vite frontend and WordPress theme" --source=. --push
 ```
 
 #### Option B: Manual GitHub Creation
