@@ -1,0 +1,89 @@
+{
+  "timestamp": "2026-01-03T17:17:11.514Z",
+  "config": {
+    "TEST_ITERATIONS": 10,
+    "CONCURRENT_REQUESTS": 5,
+    "API_BASE": "http://localhost:3002"
+  },
+  "results": [
+    {
+      "test": "NFT List - Default",
+      "stats": {
+        "avgTime": 870.0867323,
+        "minTime": 368.6553670000003,
+        "maxTime": 5351.974534,
+        "p95Time": 5351.974534
+      },
+      "sampleCount": 10
+    },
+    {
+      "test": "NFT List - With Filters",
+      "stats": {
+        "avgTime": 370.06483119999973,
+        "minTime": 364.20320099999844,
+        "maxTime": 380.901401000001,
+        "p95Time": 380.901401000001
+      },
+      "sampleCount": 10
+    },
+    {
+      "test": "NFT List - On Sale",
+      "stats": {
+        "avgTime": 539.9011067000001,
+        "minTime": 358.2767129999993,
+        "maxTime": 2105.5344139999997,
+        "p95Time": 2105.5344139999997
+      },
+      "sampleCount": 10
+    },
+    {
+      "test": "Single NFT",
+      "stats": {
+        "avgTime": 357.9427268999996,
+        "minTime": 352.31281500000114,
+        "maxTime": 364.2211690000004,
+        "p95Time": 364.2211690000004
+      },
+      "sampleCount": 10
+    },
+    {
+      "test": "Available Traits",
+      "stats": {
+        "avgTime": 230.49526370000058,
+        "minTime": 216.70428399999946,
+        "maxTime": 289.490732000002,
+        "p95Time": 289.490732000002
+      },
+      "sampleCount": 10
+    },
+    {
+      "test": "NFT Stats",
+      "stats": {
+        "avgTime": 413.18637489999855,
+        "minTime": 364.4960059999976,
+        "maxTime": 771.6243369999975,
+        "p95Time": 771.6243369999975
+      },
+      "sampleCount": 10
+    },
+    {
+      "test": "Health Check",
+      "stats": {
+        "avgTime": 2.4064360000007583,
+        "minTime": 1.645676000000094,
+        "maxTime": 3.7073750000017753,
+        "p95Time": 3.7073750000017753
+      },
+      "sampleCount": 10
+    },
+    {
+      "test": "Concurrent NFT List",
+      "stats": {
+        "totalTime": 582.1723009999987,
+        "avgTime": 501.1915654000004,
+        "successfulCount": 5
+      },
+      "sampleCount": 5
+    }
+  ]
+}

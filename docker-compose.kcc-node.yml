@@ -1,0 +1,74 @@
+services:
+  kcc-node:
+    image: kucoincommunitychain/kcc:latest
+    container_name: lomen-kcc-node
+    restart: unless-stopped
+    ports:
+      - "8545:8545"  # JSON-RPC
+      - "8546:8546"  # WebSocket
+      - "30303:30303"  # P2P
+      - "30303:30303/udp"  # P2P UDP
+    volumes:
+      - kcc-data:/root/.kcc
+    command: >
+      --syncmode=light
+      --http
+      --http.addr=0.0.0.0
+      --http.port=8545
+      --http.api=eth,net,web3,debug
+      --http.corsdomain=*
+      --http.vhosts=*
+      --ws
+      --ws.addr=0.0.0.0
+      --ws.port=8546
+      --ws.api=eth,net,web3,debug
+      --ws.origins=*
+      --allow-insecure-unlock
+      --maxpeers=50
+    environment:
+      - NETWORK_ID=321
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8545"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+  redis-cache:
+    image: redis:7-alpine
+    container_name: lomen-redis-cache
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    command: redis-server --appendonly yes --requirepass ${REDIS_PASSWORD:-lomencache123}
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  sync-monitor:
+    image: node:18-alpine
+    container_name: lomen-sync-monitor
+    restart: unless-stopped
+    volumes:
+      - ./scripts/check-kcc-sync.js:/app/check-kcc-sync.js
+      - ./package.json:/app/package.json
+    working_dir: /app
+    command: >
+      sh -c "npm install node-fetch && node check-kcc-sync.js --continuous --interval=300"
+    depends_on:
+      - kcc-node
+    environment:
+      - KCC_RPC_URL=http://kcc-node:8545
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  kcc-data:
+  redis-data:

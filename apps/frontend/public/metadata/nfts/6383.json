@@ -1,0 +1,28 @@
+{
+  "tokenId": 6383,
+  "name": "Lomen #6383",
+  "description": "Lomen is the first randomly generated art NFTs on KCC issued by the KuCoin team, made up of 10,000 bots with different looks & unique features, and also is an important part of the KuCoin Metaverse. Lomen holders will have the chance to receive Trading Bot airdrop benefits and participate in the governance of the KuCoin Metaverse in the future. Users can get it by participating in the KuCoin Trading Bot anniversary activities. Don't miss your Lomen!",
+  "image": "/images/nfts/6383.webp",
+  "attributes": [
+    {
+      "trait_type": "Head",
+      "value": "Lavender"
+    },
+    {
+      "trait_type": "Headwear",
+      "value": "Smile Glasses"
+    },
+    {
+      "trait_type": "Clothes",
+      "value": "Blue LongSleevea"
+    },
+    {
+      "trait_type": "Face",
+      "value": "Black Haughty"
+    }
+  ],
+  "rarity": {
+    "rank": 6762,
+    "score": 140
+  }
+}

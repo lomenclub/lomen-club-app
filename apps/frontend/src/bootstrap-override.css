@@ -1,0 +1,141 @@
+/* Bootstrap Override to ensure our theme variables are used */
+
+/* Override Bootstrap's default CSS variables with our theme */
+:root {
+  /* Primary Colors */
+  --bs-primary: var(--primary-500) !important;
+  --bs-primary-rgb: 36, 174, 143 !important;
+  --bs-secondary: var(--gray-600) !important;
+  --bs-success: var(--success) !important;
+  --bs-info: var(--info) !important;
+  --bs-warning: var(--warning) !important;
+  --bs-danger: var(--danger) !important;
+  --bs-light: var(--gray-100) !important;
+  --bs-dark: var(--gray-900) !important;
+  
+  /* Body */
+  --bs-body-color: var(--text-primary) !important;
+  --bs-body-bg: var(--bg-primary) !important;
+  --bs-secondary-color: var(--text-muted) !important;
+  
+  /* Borders */
+  --bs-border-color: var(--border-primary) !important;
+  --bs-border-color-translucent: var(--border-secondary) !important;
+  
+  /* Links */
+  --bs-link-color: var(--primary-500) !important;
+  --bs-link-hover-color: var(--primary-600) !important;
+  
+  /* Components */
+  --bs-card-bg: var(--bg-elevated) !important;
+  --bs-card-border-color: var(--border-primary) !important;
+  --bs-table-bg: transparent !important;
+  --bs-table-striped-bg: var(--bg-surface) !important;
+  --bs-table-hover-bg: var(--primary-50) !important;
+  --bs-table-border-color: var(--border-primary) !important;
+  
+  /* Navbar */
+  --bs-navbar-color: var(--text-primary) !important;
+  --bs-navbar-hover-color: var(--primary-500) !important;
+  --bs-navbar-active-color: var(--primary-500) !important;
+  --bs-navbar-brand-color: var(--text-primary) !important;
+  --bs-navbar-brand-hover-color: var(--text-primary) !important;
+  
+  /* Nav */
+  --bs-nav-link-color: var(--text-secondary) !important;
+  --bs-nav-link-hover-color: var(--text-primary) !important;
+  --bs-nav-link-disabled-color: var(--text-muted) !important;
+  --bs-nav-pills-link-active-bg: var(--primary-500) !important;
+  --bs-nav-pills-link-active-color: var(--text-inverted) !important;
+  
+  /* Buttons */
+  --bs-btn-bg: transparent !important;
+  --bs-btn-border-color: var(--border-primary) !important;
+  --bs-btn-color: var(--text-secondary) !important;
+  --bs-btn-hover-bg: var(--bg-surface) !important;
+  --bs-btn-hover-border-color: var(--border-secondary) !important;
+  --bs-btn-hover-color: var(--text-primary) !important;
+  --bs-btn-active-bg: var(--bg-surface) !important;
+  --bs-btn-active-border-color: var(--border-secondary) !important;
+  --bs-btn-active-color: var(--text-primary) !important;
+  
+  /* Form Controls */
+  --bs-form-control-bg: var(--bg-elevated) !important;
+  --bs-form-control-border-color: var(--border-primary) !important;
+  --bs-form-control-color: var(--text-primary) !important;
+  --bs-form-control-focus-bg: var(--bg-elevated) !important;
+  --bs-form-control-focus-border-color: var(--primary-500) !important;
+  --bs-form-control-focus-color: var(--text-primary) !important;
+}
+
+/* Force Bootstrap components to use our theme */
+body {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+.navbar {
+  background-color: var(--bg-elevated) !important;
+  border-bottom: 1px solid var(--border-primary) !important;
+}
+
+.card {
+  background-color: var(--bg-elevated) !important;
+  border: 1px solid var(--border-primary) !important;
+}
+
+.table {
+  color: var(--text-primary) !important;
+}
+
+.table th {
+  background-color: var(--bg-elevated) !important;
+  border-bottom-color: var(--border-primary) !important;
+  color: var(--text-muted) !important;
+}
+
+.table td {
+  border-bottom-color: var(--border-primary) !important;
+  color: var(--text-secondary) !important;
+}
+
+.btn-outline-primary {
+  color: var(--primary-500) !important;
+  border-color: var(--primary-500) !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-500) !important;
+  color: var(--text-inverted) !important;
+}
+
+.btn-outline-secondary {
+  color: var(--text-secondary) !important;
+  border-color: var(--border-primary) !important;
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--bg-surface) !important;
+  border-color: var(--border-secondary) !important;
+  color: var(--text-primary) !important;
+}
+
+.badge.bg-primary {
+  background-color: var(--primary-500) !important;
+}
+
+.badge.bg-success {
+  background-color: var(--success) !important;
+}
+
+.badge.bg-warning {
+  background-color: var(--warning) !important;
+}
+
+.badge.bg-danger {
+  background-color: var(--danger) !important;
+}
+
+.badge.bg-secondary {
+  background-color: var(--gray-500) !important;
+}

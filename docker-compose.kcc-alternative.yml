@@ -1,0 +1,45 @@
+services:
+  # Alternative: Use Ganache for local development
+  # This provides a local Ethereum-compatible blockchain
+  # Configured with KCC network ID (321) for compatibility
+  ganache-kcc:
+    image: trufflesuite/ganache:latest
+    container_name: lomen-ganache-kcc
+    restart: unless-stopped
+    ports:
+      - "8545:8545"  # JSON-RPC
+      - "8546:8546"  # WebSocket (if needed)
+    command: >
+      --chain.chainId 321
+      --chain.networkId 321
+      --wallet.totalAccounts 10
+      --wallet.defaultBalance 1000
+      --wallet.unlockedAccounts 0,1,2,3,4,5,6,7,8,9
+      --server.host 0.0.0.0
+      --server.port 8545
+      --database.dbPath /data
+      --miner.blockTime 3
+      --logging.verbose
+    volumes:
+      - ganache-data:/data
+    environment:
+      - KCC_NETWORK_ID=321
+
+  redis-cache:
+    image: redis:7-alpine
+    container_name: lomen-redis-cache
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    command: redis-server --appendonly yes --requirepass ${REDIS_PASSWORD:-lomencache123}
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  ganache-data:
+  redis-data:
