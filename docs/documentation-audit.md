@@ -34,7 +34,6 @@ None.
 | `docs/api/api-overview.md` | API overview. | Keep (new) |
 | `docs/contributing/contributing.md` | Contribution guidelines. | Keep (new) |
 | `docs/contributing/coding-standards.md` | Coding standards. | Keep (new) |
-| `docs/archive/*` | Legacy and superseded docs. | Archive |
 | `wordpress-theme-lomen-club/README.md` | WordPress theme docs. | Keep (updated) |
 
 ## Removed / Deprecated
@@ -44,9 +43,9 @@ None.
 | `src/config/README.md` | Removed duplicate; content migrated. | `docs/getting-started/local-development.md` |
 
 ## Contradictions & Duplications
-- Two frontend codebases exist (`/src` at repo root and `apps/frontend/src`). The canonical frontend for deployment is unclear.
-- Legacy docs referenced npm scripts such as `npm run dev:infra` that are not present in current `package.json` files.
-- Redis is referenced in legacy docs and Docker Compose, but no application code references Redis directly.
+- Two frontend codebases exist (`/src` at repo root and `apps/frontend/src`). Both have their own `package.json` and Vite configs.
+- There are no root-level workspace scripts to run backend/blockchain services; commands must be run in each package directory.
+- Docker Compose includes Redis, but there are no Redis imports in application packages, suggesting it is optional or legacy.
 
 ## Missing Critical Docs
 - Verified CI/CD pipeline documentation.

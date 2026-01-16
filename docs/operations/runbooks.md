@@ -9,7 +9,7 @@ Operators, QA, and engineers running the system locally or in staging.
 ## Prerequisites
 - Docker installed and running for infrastructure-related runbooks.
 
-## Runbook: Start Local Infrastructure (KCC Node + Redis)
+## Runbook: Start Local Infrastructure (KCC Node)
 1. Start containers:
    ```bash
    docker compose -f docker-compose.kcc-node.yml up -d
@@ -18,6 +18,8 @@ Operators, QA, and engineers running the system locally or in staging.
    ```bash
    docker ps
    ```
+
+> Note: Redis is defined in Docker Compose but is not referenced in application code. Treat it as optional until verified.
 
 ## Runbook: Check KCC Node Sync Status
 1. Run the sync status script:

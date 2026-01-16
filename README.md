@@ -10,9 +10,9 @@ Developers, QA engineers, and operators onboarding to the project.
 - See [docs/getting-started/prerequisites.md](docs/getting-started/prerequisites.md).
 
 ## Quickstart (Local)
-> The repository contains two frontend code paths (`/src` and `apps/frontend`). Verify which is the active UI for your environment.
+> The repository contains two frontend code paths (`/src` and `apps/frontend`). Decide which UI to run for your environment.
 
-### Start infrastructure (KCC + Redis)
+### Start infrastructure (KCC node via Docker)
 ```bash
 docker compose -f docker-compose.kcc-node.yml up -d
 ```
@@ -34,6 +34,12 @@ npm run dev
 ### Start frontend (apps/frontend)
 ```bash
 cd apps/frontend
+npm install
+npm run dev
+```
+
+### Start frontend (root /src)
+```bash
 npm install
 npm run dev
 ```

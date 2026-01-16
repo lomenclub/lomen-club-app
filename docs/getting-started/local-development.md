@@ -12,7 +12,7 @@ Developers and QA engineers working on the application.
 
 ## Recommended Setup
 
-### 1) Start Local Infrastructure (KCC Node + Redis)
+### 1) Start Local Infrastructure (KCC Node)
 ```bash
 docker compose -f docker-compose.kcc-node.yml up -d
 ```
@@ -53,6 +53,7 @@ Both frontend trees reference `config/app-config.ts` to toggle the Coming Soon o
 ## Notes
 - The backend loads the `.env` file from the repository root via `../../.env`.
 - The blockchain service defaults to `KCC_RPC_URL=http://localhost:8545`.
+- Redis is defined in Docker Compose, but there are no Redis imports in application code. Treat it as optional until confirmed.
 
 ## Verification Steps
 - Visit `http://localhost:3000` for the frontend.

@@ -10,9 +10,9 @@ Developers and QA engineers setting up the project locally.
 None.
 
 ## Required Software
-- **Node.js**: Needed for all services (frontend, backend, blockchain). Version is not enforced in `package.json`; previous docs reference Node 18+.
-- **npm**: Used to install dependencies and run scripts.
-- **Docker + Docker Compose**: Required to run the local KCC node and Redis containers defined in `docker-compose.kcc-node.yml`.
+- **Node.js**: Needed for all services (frontend, backend, blockchain). Version is not enforced in `package.json`; prior QA notes referenced Node 18+.
+- **npm**: Used to install dependencies and run scripts per package.
+- **Docker + Docker Compose**: Required to run the local KCC node container defined in `docker-compose.kcc-node.yml`.
 
 ## External Services
 - **MongoDB**: The backend requires `MONGODB_URI` to connect to a MongoDB database.

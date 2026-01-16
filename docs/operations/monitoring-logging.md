@@ -14,8 +14,8 @@ Operators and engineers troubleshooting runtime issues.
 - Docker containers (KCC node, Redis) log to Docker's logging driver.
 
 ## Health Endpoints
-- **Backend**: `/api/health`
-- **Blockchain Service**: `/api/health`
+- **Backend**: `/api/health` (default port 3002).
+- **Blockchain Service**: `/api/health` (default port 3003).
 
 ## Basic Checks
 ```bash

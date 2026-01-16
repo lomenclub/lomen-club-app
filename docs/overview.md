@@ -10,10 +10,11 @@ Engineers, QA, DevOps, and stakeholders who need a quick mental model of the sys
 None.
 
 ## System Summary
-The repository contains a React/Vite frontend, an Express-based backend API, a blockchain service for KCC RPC interactions, and shared packages for database access and type definitions. These components are organized under `apps/` and `packages/`, with additional deployment scripts and a WordPress theme directory.
+The repository contains two React/Vite frontends (one at repo root and one under `apps/frontend`), an Express-based backend API, a blockchain service for KCC RPC interactions, and shared packages for database access and type definitions. These components are organized under `apps/` and `packages/`, with additional deployment scripts and a WordPress theme directory.
 
 ### Primary Components
-- **Frontend (React/Vite)**: `apps/frontend` contains the UI application with shared TypeScript types via `@lomen-club/shared`.
+- **Frontend (React/Vite)**: `apps/frontend` contains a UI application with shared TypeScript types via `@lomen-club/shared`.
+- **Root Frontend (React/Vite)**: `/src` at the repository root contains a second UI app with its own `vite.config.ts` and `package.json`.
 - **Backend API (Express)**: `apps/backend` hosts the API server that connects to MongoDB and uses services from `@lomen-club/database`.
 - **Blockchain Service (Express + ethers)**: `packages/blockchain` provides blockchain RPC endpoints and contract queries for the KCC network.
 - **Database Package (MongoDB)**: `packages/database` centralizes MongoDB connectivity, collections, and enrichment services.
@@ -34,8 +35,8 @@ wordpress-theme-lomen-club/  WordPress theme assets
 ```
 
 ## Known Ambiguities / To Verify
-- A second Vite project exists at the repository root (`/src`, `vite.config.ts`, and `package.json`). It is unclear whether this root app or `apps/frontend` is the canonical UI. Verify which frontend is deployed and update docs accordingly.
-- Docker Compose defines Redis, but there are no obvious Redis imports in the application packages. Confirm whether Redis is still required for runtime or only for legacy flows.
+- Determine which frontend is deployed in production (`/src` vs `apps/frontend`), since both exist and include Vite configs.
+- Docker Compose defines Redis, but there are no Redis imports in application packages. Confirm whether Redis is required or only a legacy component.
 
 ## Glossary
 - **KCC**: KuCoin Community Chain (blockchain network used by the app).
@@ -43,4 +44,4 @@ wordpress-theme-lomen-club/  WordPress theme assets
 - **RPC**: Remote procedure call; used for blockchain queries.
 
 ## Last Verified
-Unknown / To verify. Validate current frontend entry point and Redis usage.
+Unknown / To verify. Confirm the canonical frontend entry point and whether Redis is required.

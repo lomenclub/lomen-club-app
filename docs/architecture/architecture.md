@@ -29,6 +29,11 @@ The Lomen Club platform is a web application that presents NFTs and membership f
 - **Role:** Browser UI for NFT browsing, profiles, admin tools, and wallet interactions.
 - **Runtime:** Vite dev server (default port 3000).
 
+### Frontend (React/Vite, root)
+- **Location:** `/src` at repository root
+- **Role:** Additional UI app with its own Vite config and package.json.
+- **Runtime:** Vite dev server (default port 3000).
+
 ### Backend API (Express)
 - **Location:** `apps/backend`
 - **Role:** REST API for NFT data, auth flows, profiles, and admin functions.

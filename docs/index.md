@@ -51,8 +51,5 @@ None.
 - [Contributing](contributing/contributing.md)
 - [Coding standards](contributing/coding-standards.md)
 
-### Archive
-- [Legacy & archived docs](archive/)
-
 ## Last Verified
 Unknown / To verify. Validate links and run key workflows referenced in the docs.

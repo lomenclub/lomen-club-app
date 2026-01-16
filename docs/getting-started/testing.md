@@ -25,6 +25,13 @@ npm run lint
 npm run test
 ```
 
+### Database
+```bash
+cd packages/database
+npm run lint
+npm run build
+```
+
 ### Shared
 ```bash
 cd packages/shared
@@ -32,9 +39,14 @@ npm run lint
 npm run test
 ```
 
-### Frontend
+### Frontend (apps/frontend)
 ```bash
 cd apps/frontend
+npm run lint
+```
+
+### Frontend (root /src)
+```bash
 npm run lint
 ```
 
