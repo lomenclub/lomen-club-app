@@ -1,5 +1,18 @@
 # API Input Validation Test Results
 
+## Purpose
+Capture findings from API input validation tests and document issues discovered.
+
+## Audience
+QA engineers and backend developers.
+
+## Prerequisites
+- Backend API running locally or in a test environment.
+- Access to API endpoints and logs.
+
+## Last Verified
+2026-01-03 (legacy QA run).
+
 ## Test Date
 2026-01-03
 

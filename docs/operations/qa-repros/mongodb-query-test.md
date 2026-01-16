@@ -1,5 +1,17 @@
 # MongoDB Query Performance Analysis
 
+## Purpose
+Document MongoDB query patterns and performance observations for NFTs and profiles.
+
+## Audience
+Backend developers and database operators.
+
+## Prerequisites
+- Access to MongoDB and relevant collections.
+
+## Last Verified
+2026-01-03 (legacy QA run).
+
 ## Test Date
 2026-01-03
 

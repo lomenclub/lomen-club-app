@@ -1,5 +1,17 @@
 # Sync/Enrichment Job Correctness Analysis
 
+## Purpose
+Document idempotency and correctness findings for sync/enrichment services.
+
+## Audience
+Backend and blockchain service developers, QA engineers.
+
+## Prerequisites
+- Access to sync service code and environment logs.
+
+## Last Verified
+2026-01-03 (legacy QA run).
+
 ## Test Date
 2026-01-03
 

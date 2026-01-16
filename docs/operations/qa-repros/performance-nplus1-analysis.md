@@ -1,5 +1,18 @@
 # Performance Analysis: N+1 Blockchain Calls Issue
 
+## Purpose
+Capture performance findings related to N+1 blockchain calls in enrichment flows.
+
+## Audience
+Backend and blockchain service developers, performance QA.
+
+## Prerequisites
+- Access to backend and blockchain service logs.
+- Ability to run performance tests against `/api/nfts`.
+
+## Last Verified
+2026-01-03 (legacy performance run).
+
 ## Issue Identified
 **Critical Performance Bottleneck:** The enrichment service makes individual HTTP calls to the blockchain service for each NFT that needs blockchain data refresh, resulting in N+1 query pattern.
 

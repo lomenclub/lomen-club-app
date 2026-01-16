@@ -1,5 +1,18 @@
 # Blockchain RPC Testing Results
 
+## Purpose
+Document blockchain RPC behavior and resiliency test results.
+
+## Audience
+Blockchain service developers and QA engineers.
+
+## Prerequisites
+- Blockchain service running.
+- Access to a KCC RPC endpoint (local node or public RPC).
+
+## Last Verified
+2026-01-03 (legacy QA run).
+
 ## Test Date
 2026-01-03
 

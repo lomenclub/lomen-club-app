@@ -1,5 +1,18 @@
 # Fix Plan: Blockchain RPC Timeout Wrapper
 
+## Purpose
+Outline a remediation plan for RPC timeout handling in the blockchain service.
+
+## Audience
+Blockchain service developers and QA engineers.
+
+## Prerequisites
+- Access to the blockchain service codebase.
+- Ability to run backend/blockchain tests.
+
+## Last Verified
+Unknown / To verify. Re-evaluate against current blockchain service implementation.
+
 ## Issue
 Blockchain RPC calls may hang indefinitely if KCC node becomes unresponsive, as contract calls are not wrapped with timeout.
 
