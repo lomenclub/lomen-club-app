@@ -1,5 +1,17 @@
 # Lomen Club WordPress Theme
 
+## Purpose
+Describe the WordPress theme included in this repository and how to install it.
+
+## Audience
+Developers or site administrators installing the Lomen Club WordPress theme.
+
+## Prerequisites
+- A WordPress installation with access to the themes directory or admin UI.
+
+## Last Verified
+Unknown / To verify. Confirm theme compatibility with current WordPress version.
+
 A modern dark-first WordPress theme that perfectly matches the design of the Lomen Club React application. Features a beautiful dark theme with primary green accent (#24AE8F), responsive design, and full blog functionality.
 
 ## 🎨 Design Features
